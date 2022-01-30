@@ -21,4 +21,14 @@ void main(void){
 	ptr = (struct tm*) localtime(&segundos);// transforma o argumento em uma data feita pelo formato Epoch
 
 	printf("%dh %dmin %ds\n", ptr->tm_hour, ptr->tm_min, ptr->tm_sec);
+	
+	if(ptr->tm_isdst > 0)
+		puts("[*] Está considerando o horário de verão");
+	
+	else if(ptr->tm_isdst == 0)
+		puts("[*] Não está considerando o horário de verão");
+
+	else
+		puts("[*] Informação sobre horário de verão indisponível");	
+	
 }
