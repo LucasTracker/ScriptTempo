@@ -14,7 +14,7 @@ void main(void){
 		int tm_yday; /* dias a partir de 1 de jan / 0-365*/
 		int tm_isdst; /*Indicador de horário de verão*/
 	}tempo;
-	time_t segundos;	
+	time_t segundos; //tipo inteiro	
 	struct tm *ptr; //ponteiro para a struct tm
 
 	segundos = time(NULL); //retorna o número de segundos no formato Epoch
